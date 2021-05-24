@@ -8,6 +8,7 @@ import EnzymeAdapter from "enzyme-adapter-react-16";
 import { findByTestAttribute, mockStore } from "../../test";
 import { MOCK_METRIC } from "../../test/consts";
 import { Provider } from "react-redux";
+import moment from "moment";
 
 Enzyme.configure({ adapter: new EnzymeAdapter() });
 
@@ -60,16 +61,18 @@ describe("snapshot and unit tests for charts", () => {
   });
 
   it("should reset datetime range", () => {
-    jest
-      .useFakeTimers("modern")
-      .setSystemTime(new Date("2021-05-25").getTime());
+    const date = new Date("2021-05-25").getTime();
+    const expectedDateString = moment(date).format("DD-MMM-YY HH:mm");
+    jest.useFakeTimers("modern").setSystemTime(date);
     findByTestAttribute(wrapper, "charts-range-reset")
       .first()
       .simulate("click");
     const startDate = findByTestAttribute(wrapper, "datetime-start");
-    expect(startDate.find("input").instance().value).toMatch("25-May-21 03:00");
+    expect(startDate.find("input").instance().value).toMatch(
+      expectedDateString
+    );
     const endDate = findByTestAttribute(wrapper, "datetime-end");
-    expect(endDate.find("input").instance().value).toMatch("25-May-21 03:00");
+    expect(endDate.find("input").instance().value).toMatch(expectedDateString);
   });
 
   it("should render charts correctly", () => {

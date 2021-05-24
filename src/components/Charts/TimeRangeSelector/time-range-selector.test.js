@@ -5,6 +5,7 @@ import Enzyme, { mount } from "enzyme";
 import toJson from "enzyme-to-json";
 import EnzymeAdapter from "enzyme-adapter-react-16";
 import { findByTestAttribute } from "../../../test";
+import moment from "moment";
 
 Enzyme.configure({ adapter: new EnzymeAdapter() });
 
@@ -18,15 +19,15 @@ const setup = (props) => {
 };
 
 describe("snapshot and unit tests for TimeRangeSelector", () => {
-  let wrapper;
+  let wrapper, expectedDateString, date;
   beforeAll(() => {
     const mGetRandomValues = jest.fn().mockReturnValueOnce(new Uint32Array(10));
     Object.defineProperty(window, "crypto", {
       value: { getRandomValues: mGetRandomValues },
     });
-    jest
-      .useFakeTimers("modern")
-      .setSystemTime(new Date("2021-05-23").getTime());
+    date = new Date("2021-05-23").getTime();
+    expectedDateString = moment(date).format("DD-MMM-YY HH:mm");
+    jest.useFakeTimers("modern").setSystemTime(date);
   });
 
   beforeEach(() => {
@@ -39,22 +40,34 @@ describe("snapshot and unit tests for TimeRangeSelector", () => {
 
   it("should show the current date/time", () => {
     const startDate = findByTestAttribute(wrapper, "datetime-start");
-    expect(startDate.find("input").instance().value).toMatch("23-May-21 03:00");
+    expect(startDate.find("input").instance().value).toMatch(
+      expectedDateString
+    );
     const endDate = findByTestAttribute(wrapper, "datetime-end");
-    expect(endDate.find("input").instance().value).toMatch("23-May-21 03:00");
+    expect(endDate.find("input").instance().value).toMatch(expectedDateString);
   });
 
   it("should update the date/time after filter change", () => {
+    const startDateObj = new Date("2021-05-21");
+    const endDateObj = new Date("2021-05-22");
+    const startDateExpectedDateString =
+      moment(startDateObj).format("DD-MMM-YY HH:mm");
+    const endDateExpectedDateString =
+      moment(endDateObj).format("DD-MMM-YY HH:mm");
     wrapper.setProps({
       ...defaultProps,
       filters: {
-        start: new Date("2021-05-21"),
-        end: new Date("2021-05-22"),
+        start: startDateObj,
+        end: endDateObj,
       },
     });
     const startDate = findByTestAttribute(wrapper, "datetime-start");
-    expect(startDate.find("input").instance().value).toMatch("21-May-21 03:00");
+    expect(startDate.find("input").instance().value).toMatch(
+      startDateExpectedDateString
+    );
     const endDate = findByTestAttribute(wrapper, "datetime-end");
-    expect(endDate.find("input").instance().value).toMatch("22-May-21 03:00");
+    expect(endDate.find("input").instance().value).toMatch(
+      endDateExpectedDateString
+    );
   });
 });

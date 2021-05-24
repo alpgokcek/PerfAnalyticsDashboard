@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot and unit tests for chart should render correctly 1`] = `
+<Chart
+  keyField="ttfb"
+  metrics={
+    Array [
+      Object {
+        "domLoad": "200",
+        "fcp": "500",
+        "timestamp": "2021-05-22T22:33:10.292Z",
+        "ttfb": "700",
+        "url": "https://google.com",
+        "windowLoadEvents": "300",
+      },
+      Object {
+        "domLoad": "200",
+        "fcp": "500",
+        "timestamp": "2021-05-22T22:33:10.292Z",
+        "ttfb": "700",
+        "url": "https://google.com",
+        "windowLoadEvents": "300",
+      },
+      Object {
+        "domLoad": "200",
+        "fcp": "500",
+        "timestamp": "2021-05-22T22:33:10.292Z",
+        "ttfb": "700",
+        "url": "https://google.com",
+        "windowLoadEvents": "300",
+      },
+    ]
+  }
+  title="Testing is fun!"
+>
+  <div
+    className="chart"
+  >
+    <div
+      className="chart-title"
+      data-test="chart-title"
+    >
+      Testing is fun!
+    </div>
+    <div
+      data-test="chart-ttfb-wrapper"
+    >
+      <Line
+        className="chart-canvas"
+        data={
+          Object {
+            "datasets": Array [
+              Object {
+                "data": Array [
+                  Object {
+                    "x": "2021-05-22T22:33:10.292Z",
+                    "y": "700",
+                  },
+                  Object {
+                    "x": "2021-05-22T22:33:10.292Z",
+                    "y": "700",
+                  },
+                  Object {
+                    "x": "2021-05-22T22:33:10.292Z",
+                    "y": "700",
+                  },
+                ],
+                "label": "https://google.com",
+              },
+            ],
+            "labels": Array [
+              "2021-05-22T22:33:10.292Z",
+              "2021-05-22T22:33:10.292Z",
+              "2021-05-22T22:33:10.292Z",
+            ],
+          }
+        }
+        data-test="chart-ttfb"
+      >
+        <div>
+          chart
+        </div>
+      </Line>
+    </div>
+  </div>
+</Chart>
+`;

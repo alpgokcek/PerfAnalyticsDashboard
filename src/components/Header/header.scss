@@ -1,0 +1,21 @@
+@import "../../styles/variables.scss";
+@import "../../styles/placeholders.scss";
+
+.header {
+  border-bottom: 1px solid $colorBlackBoxShadow;
+  margin-bottom: 20px;
+
+  &__wrapper {
+    @extend %wrapper;
+    background: $colorWhite;
+    align-items: center;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  &__logo {
+    height: 80px;
+  }
+}

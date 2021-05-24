@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  perfanalytics-dashboard:
+    container_name: perfanalytics-dashboard
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ".:/app"
+      - "/app/node_modules"
+    ports:
+      - 8081:3000
+    environment:
+      - CHOKIDAR_USEPOLLING=true

@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+- lts/*
+script:
+- yarn test
+branches:
+  except:
+  - legacy
+  only:
+  - main
+deploy:
+  provider: heroku
+  app: dashboard-perf-analytics
+  api_key:
+    secure: tmtDTfMR1rwDgKegsWn4cjRoJ+Hpd1FAuFu8WgEjvbOiJ14i01TBM9PMm1efyecpsWV1e5xei3C1odLPVMSbXfHre8CfxAdH8EQBr3lK3O8fJk9xGLyqGooUzjU0LVV5hAWSeew1E9W1i9aIa8FVAy2NcRqDzfJrFiHd4G9FM+JxhWp8FkQN8Bo+gGHBivzhrMcWZlSdtXpRoYSHNsar5+toAdNcDv+9c3bRlqDlJAfdlGFrskFMvVQSIeRX0JOyhD+iU/emLkMXWo/B7EJWelQZgXrIE9vIPKNLULvmrBdJRfShf9tV6sHZcNvnG/4mwraaefI3qGHyT56UiMs1VcyZT+f7bXWnhwsIEzAnhWl4fHefc9iWpqcx5dp+e5njjAIghdsb9o70tcDiUnbVHY9hBmSa+9g5RQ2dtNAVLXcMBc8Oupg0t/FjGY3hF9Rb2oLd3cvzajfG0cIYZzG5ys/ZKByho3Y5st+oUQYMALePWIeC+kj0I1k6y/dSTYaA4D2ZHEA5bGpXv7o7bcSriHPCt4dek00wwP++Q6tLeafHrPFo93QZbv7fNICWlLlx6yYyII7Ekz4aupR7AUlO70h2/0rQO+O9BnbmbhY+INwz/j3k1+3+PFJ8DNSipGWxAGjSVmFnpiAmkwDe3FIw9/YtXb77EfbXuXRKL1bgBsM=

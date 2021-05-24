@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "baseUrl": ".",
+    "paths": {
+      "Actions": ["./src/store/actions"],
+      "Actions/*": ["./src/store/actions/*"],
+      "Components/*": ["./src/components/*"],
+      "Pages/*": ["./src/pages/*"],
+      "Server/*": ["./src/server/*"],
+      "History": ["./src/history"],
+      "Utils": ["./src/utils"],
+      "Styles/*": ["./src/styles/*"],
+      "AppConstants": ["./src/app-consts"]
+    }
+  },
+  "include": [
+    "src",
+    "src/config/webpack.client.js",
+    "src/config/webpack.server.js"
+  ]
+}

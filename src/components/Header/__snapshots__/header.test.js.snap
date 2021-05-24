@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot test for header should render correctly 1`] = `
+<div
+  className="header"
+>
+  <div
+    className="header__wrapper"
+  >
+    <img
+      alt="perfanalytics dashboard logo"
+      className="header__logo"
+      src="assets/img/logo.png"
+    />
+  </div>
+</div>
+`;

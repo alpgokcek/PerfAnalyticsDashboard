@@ -1,0 +1,14 @@
+@import "../../styles/variables.scss";
+@import "../../styles/placeholders";
+
+.content {
+  @extend %content;
+
+  &__container {
+    @extend %wrapper;
+    margin-bottom: 300px;
+    @include phone {
+      padding: 0 20px;
+    }
+  }
+}

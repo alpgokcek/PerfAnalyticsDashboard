@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`unit and snapshot tests for dashboard page should render correctly 1`] = `
+<Layout
+  data-test="dashboard-wrapper"
+>
+  <div
+    className="dashboard__container"
+    data-test="dashboard-container"
+  >
+    <Connect(Charts)
+      data-test="charts-component"
+    />
+  </div>
+</Layout>
+`;

@@ -1,0 +1,290 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot and unit tests for charts should render correctly 1`] = `
+<Provider
+  store={
+    Object {
+      "@@observable": [Function],
+      "dispatch": [MockFunction],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(Charts)
+    getMetrics={[Function]}
+    metrics={
+      Array [
+        Object {
+          "domLoad": "200",
+          "fcp": "500",
+          "timestamp": "2021-05-22T22:33:10.292Z",
+          "ttfb": "700",
+          "url": "https://google.com",
+          "windowLoadEvents": "300",
+        },
+        Object {
+          "domLoad": "200",
+          "fcp": "500",
+          "timestamp": "2021-05-22T22:33:10.292Z",
+          "ttfb": "700",
+          "url": "https://google.com",
+          "windowLoadEvents": "300",
+        },
+        Object {
+          "domLoad": "200",
+          "fcp": "500",
+          "timestamp": "2021-05-22T22:33:10.292Z",
+          "ttfb": "700",
+          "url": "https://google.com",
+          "windowLoadEvents": "300",
+        },
+      ]
+    }
+  >
+    <Charts
+      getMetrics={[Function]}
+      metrics={Array []}
+    >
+      <div>
+        <div
+          className="charts__time-range"
+        >
+          <TimeRangeSelector
+            data-test="charts-datetime"
+            filters={
+              Object {
+                "end": 2021-05-23T00:00:00.000Z,
+                "start": 2021-05-23T00:00:00.000Z,
+              }
+            }
+            onChange={[Function]}
+          >
+            <div
+              className="time-range-selector"
+            >
+              <div
+                className="time-range-selector__container"
+              >
+                <div>
+                  Start Date
+                </div>
+                <n
+                  data-test="datetime-start"
+                  format="dd-MMM-yy HH:mm"
+                  onChange={[Function]}
+                  placeholder="Choose a start date and time"
+                  step={30}
+                  value={2021-05-23T00:00:00.000Z}
+                >
+                  <input
+                    data-test="datetime-start"
+                    key="1"
+                  />
+                </n>
+              </div>
+              <div
+                className="time-range-selector__container"
+              >
+                <div>
+                  End Date
+                </div>
+                <n
+                  data-test="datetime-end"
+                  format="dd-MMM-yy HH:mm"
+                  onChange={[Function]}
+                  placeholder="Choose an end date and time"
+                  step={30}
+                  value={2021-05-23T00:00:00.000Z}
+                >
+                  <input
+                    data-test="datetime-end"
+                    key="2"
+                  />
+                </n>
+              </div>
+            </div>
+          </TimeRangeSelector>
+          <div
+            className="charts__time-range-cta-wrapper"
+          >
+            <div
+              className="charts__time-range-reset"
+              data-test="charts-range-reset"
+              onClick={[Function]}
+            >
+              Reset Range
+            </div>
+          </div>
+        </div>
+        <div
+          className="charts__container"
+          data-test="charts-container"
+        >
+          <Chart
+            keyField="ttfb"
+            metrics={Array []}
+            title="TTFB"
+          >
+            <div
+              className="chart"
+            >
+              <div
+                className="chart-title"
+                data-test="chart-title"
+              >
+                TTFB
+              </div>
+              <div
+                data-test="chart-ttfb-wrapper"
+              >
+                <EmptyContent
+                  data-test="chart-empty"
+                >
+                  <div
+                    className="empty-content"
+                  >
+                    <div
+                      className="empty-content__wrapper"
+                    >
+                      <img
+                        alt="no-data"
+                        className="empty-content__wrapper-icon"
+                        src="assets/img/no-data.png"
+                      />
+                      <div>
+                        Not content found.
+                      </div>
+                    </div>
+                  </div>
+                </EmptyContent>
+              </div>
+            </div>
+          </Chart>
+          <Chart
+            keyField="fcp"
+            metrics={Array []}
+            title="FCP"
+          >
+            <div
+              className="chart"
+            >
+              <div
+                className="chart-title"
+                data-test="chart-title"
+              >
+                FCP
+              </div>
+              <div
+                data-test="chart-fcp-wrapper"
+              >
+                <EmptyContent
+                  data-test="chart-empty"
+                >
+                  <div
+                    className="empty-content"
+                  >
+                    <div
+                      className="empty-content__wrapper"
+                    >
+                      <img
+                        alt="no-data"
+                        className="empty-content__wrapper-icon"
+                        src="assets/img/no-data.png"
+                      />
+                      <div>
+                        Not content found.
+                      </div>
+                    </div>
+                  </div>
+                </EmptyContent>
+              </div>
+            </div>
+          </Chart>
+          <Chart
+            keyField="domLoad"
+            metrics={Array []}
+            title="DOM Load"
+          >
+            <div
+              className="chart"
+            >
+              <div
+                className="chart-title"
+                data-test="chart-title"
+              >
+                DOM Load
+              </div>
+              <div
+                data-test="chart-domLoad-wrapper"
+              >
+                <EmptyContent
+                  data-test="chart-empty"
+                >
+                  <div
+                    className="empty-content"
+                  >
+                    <div
+                      className="empty-content__wrapper"
+                    >
+                      <img
+                        alt="no-data"
+                        className="empty-content__wrapper-icon"
+                        src="assets/img/no-data.png"
+                      />
+                      <div>
+                        Not content found.
+                      </div>
+                    </div>
+                  </div>
+                </EmptyContent>
+              </div>
+            </div>
+          </Chart>
+          <Chart
+            keyField="windowLoadEvents"
+            metrics={Array []}
+            title="Window Load Events"
+          >
+            <div
+              className="chart"
+            >
+              <div
+                className="chart-title"
+                data-test="chart-title"
+              >
+                Window Load Events
+              </div>
+              <div
+                data-test="chart-windowLoadEvents-wrapper"
+              >
+                <EmptyContent
+                  data-test="chart-empty"
+                >
+                  <div
+                    className="empty-content"
+                  >
+                    <div
+                      className="empty-content__wrapper"
+                    >
+                      <img
+                        alt="no-data"
+                        className="empty-content__wrapper-icon"
+                        src="assets/img/no-data.png"
+                      />
+                      <div>
+                        Not content found.
+                      </div>
+                    </div>
+                  </div>
+                </EmptyContent>
+              </div>
+            </div>
+          </Chart>
+        </div>
+      </div>
+    </Charts>
+  </Connect(Charts)>
+</Provider>
+`;

@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot and unit tests for TimeRangeSelector should render correctly 1`] = `
+<TimeRangeSelector
+  filters={
+    Object {
+      "end": 2021-05-23T00:00:00.000Z,
+      "start": 2021-05-23T00:00:00.000Z,
+    }
+  }
+  onChange={[Function]}
+>
+  <div
+    className="time-range-selector"
+  >
+    <div
+      className="time-range-selector__container"
+    >
+      <div>
+        Start Date
+      </div>
+      <n
+        data-test="datetime-start"
+        format="dd-MMM-yy HH:mm"
+        onChange={[Function]}
+        placeholder="Choose a start date and time"
+        step={30}
+        value={2021-05-23T00:00:00.000Z}
+      >
+        <input
+          data-test="datetime-start"
+          key="1"
+        />
+      </n>
+    </div>
+    <div
+      className="time-range-selector__container"
+    >
+      <div>
+        End Date
+      </div>
+      <n
+        data-test="datetime-end"
+        format="dd-MMM-yy HH:mm"
+        onChange={[Function]}
+        placeholder="Choose an end date and time"
+        step={30}
+        value={2021-05-23T00:00:00.000Z}
+      >
+        <input
+          data-test="datetime-end"
+          key="2"
+        />
+      </n>
+    </div>
+  </div>
+</TimeRangeSelector>
+`;

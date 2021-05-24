@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot test for EmptyContent should render correctly 1`] = `
+<div
+  className="empty-content"
+>
+  <div
+    className="empty-content__wrapper"
+  >
+    <img
+      alt="no-data"
+      className="empty-content__wrapper-icon"
+      src="assets/img/no-data.png"
+    />
+    <div>
+      Not content found.
+    </div>
+  </div>
+</div>
+`;

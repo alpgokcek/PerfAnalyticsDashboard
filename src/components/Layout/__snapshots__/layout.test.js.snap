@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot test for header should render correctly 1`] = `
+<Fragment>
+  <Header />
+  <div
+    className="content"
+  >
+    <div
+      className="content__container"
+    >
+      <div>
+        test
+      </div>
+    </div>
+  </div>
+</Fragment>
+`;

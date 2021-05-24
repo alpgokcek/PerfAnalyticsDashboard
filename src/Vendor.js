@@ -1,0 +1,2 @@
+// Modernizr
+import "./modernizr.js";
